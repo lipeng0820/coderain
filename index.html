@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑客帝国代码雨</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        #fullscreenHint {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #0f0;
+            font-family: monospace;
+            font-size: 24px;
+            display: none;
+        }
+        #twitterFollow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #1DA1F2;
+            border: 2px solid #1DA1F2;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
+        }
+        #twitterFollow:hover {
+            transform: scale(1.05);
+        }
+        #twitterFollow svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            #twitterFollow {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            #twitterFollow svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" style="touch-action: none;"></canvas>
+    <div id="fullscreenHint">按 F 键进入全屏</div>
+    <div id="twitterFollow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><g><path fill="#ffffff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+        <span id="followText"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
